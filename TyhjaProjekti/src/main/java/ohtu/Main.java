@@ -27,6 +27,8 @@ public class Main {
         Submission[] subs = mapper.fromJson(bodyText, Submission[].class);
         Course c = mapper.fromJson(courseBodyText, Course.class);
         
+        System.out.println("Kurssi " + c.getName() + c.getTerm());
+        
         System.out.println("Oliot:");
         for (Submission submission : subs) {
             System.out.println("Viikko " + submission.getWeek() + ": tehtyjä tehtäviä yhteensä: " + submission.done().size()
